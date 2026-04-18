@@ -51,8 +51,6 @@ From there the conversation expanded into hyperparameter tuning, where the LLM i
 
 ## Deliverable 2 — Why Random Forest?
 
-### What is a Random Forest?
-
 A **Random Forest** trains a large number of decision trees, each on a random bootstrap sample of the data and each considering only a random subset of features at every split. Predictions are made by majority vote. The randomness forces diversity between trees, which prevents the overfitting that plagues a single decision tree. 
  
 It was chosen for this problem because it handles the 20 mixed-scale sensor features (currents, temperatures, speeds) without normalization, produces built-in feature importance scores, and can be configured to handle the severe class imbalance (~3% failures) through sample weighting and cost-sensitive splitting. Since `grip_lost` and `Robot_ProtectiveStop` are independent failure modes, two separate forests were trained, one per target.
@@ -78,7 +76,7 @@ The first model uses sklearn's `RandomForestClassifier` with entirely default hy
 
 ### Baseline Results
 
-![Baseline Confusion Matrix](code_1/confusion_matrix_v1.png)
+![Baseline Confusion Matrix](v1confmatrix.png)
 
 | Metric | grip_lost | Robot_ProtectiveStop |
 |---|---|---|
