@@ -65,8 +65,6 @@ A key advantage for hyperparameter tuning is the **OOB (out-of-bag) error**: eve
 
 ## Deliverable 3 — Baseline Model (`code_1`)
 
-**Code:** [`code_1/random_forest_v1.m`](code_1/random_forest_v1.m)
-
 The first model uses sklearn's `RandomForestClassifier` with entirely default hyperparameters and no adjustments for class imbalance:
 
 | Setting | Value |
@@ -131,7 +129,7 @@ The search is scored using **F-beta (β=2)** rather than accuracy or standard F1
 
 ### Tuned Results
 
-![Tuned Confusion Matrix](code_2/confusion_matrix_v2.png)
+![Tuned Confusion Matrix](v7confmatrix.png)
 
 | Metric | grip_lost | Robot_ProtectiveStop |
 |---|---|---|
